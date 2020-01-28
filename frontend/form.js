@@ -5,10 +5,17 @@ $( "input[type=submit]" ).click(function( e ) {
     var puerto = ":8888";
     if(valor == "enviar"){// POST a backend
         var frase = $("#fraseAEncriptar").val();
-        var endpoint = "/process";
-        $.post( url + puerto + endpoint, { frase: frase }, function( data ) {
-            $('#fraseEncriptada').text(data);
+        console.log(frase.replace(/\s+/g,'').length);
+        if(frase.length == 0){
+          alert("No has indicado ninguna frase.");
+        }else if(frase.replace(/\s+/g,'').length == 0){
+          alert("Los espacios no cuentan como frase.");
+        }else{
+          var endpoint = "/process";
+          $.post( url + puerto + endpoint, { frase: frase }, function( data ) {
+              $('#fraseEncriptada').text(data);
           });
+        }
     }else if(valor == "cargar"){// GET a backend
       var endpoint = "/history";
       $.get( url + puerto + endpoint, function( data ) {

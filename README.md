@@ -18,3 +18,4 @@ Para la parte de python he instalado el paquete de cifrado césar con el comando
 ```python
 pip install caesarcipher
 ```
+Tanto la BBDD como la colección las he creado usando la interfaz gráfica de ___MongoDB Compass Community___
