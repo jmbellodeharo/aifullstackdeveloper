@@ -9,6 +9,10 @@ Para ejecutarlo se ha de usar el comando
 ```
 npm start 
 ```
+En el caso de tener instalado nodemon, que se instala con `npm install --save-dev nodemon`, ejecutar el comando
+```
+npm run start-dev
+```
 ## BBDD
 Como BBDD he usado <a href="https://www.mongodb.com/download-center/community">MongoDB</a>, la cual he instalado de manera local y he ejecutado mediante el uso del daemon "mongod". Lo he configurado de tal manera que escucha en "localhost:27017".
 He creado una BBDD cuyo nombre es "frases" y una colección llamada "frasesColl".
